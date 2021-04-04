@@ -8,7 +8,7 @@ pipeline {
                 sh '''
                 pwd
                 cd /home/vagrant/Eshop/backend
-                mvn package
+                mvn package -DskipTests
                 pwd
                 '''
             }
