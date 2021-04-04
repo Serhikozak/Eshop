@@ -7,6 +7,7 @@ pipeline {
                 echo 'Hello World'
                 sh '''
                 pwd
+                cd backend
                 mvn package -DskipTests
                 pwd
                 '''
