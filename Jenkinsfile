@@ -2,10 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Backend') {
             steps {
                 echo 'Hello World'
-                sh 'pwd'
+                sh '''
+                pwd
+                cd /home/vagrant/Eshop/backend
+                pwd
+                '''
             }
         }
     }
