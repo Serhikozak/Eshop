@@ -17,12 +17,11 @@ pipeline {
             steps {
                 sh '''
                 pwd
-                cd ..
                 cd frontend
                 ng build --prod
                 '''
             }
-          
+
         }
     }
 }
