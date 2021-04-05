@@ -7,10 +7,20 @@ pipeline {
                 echo 'Hello World'
                 sh '''
                 pwd
-                cd /home/vagrant/Eshop/backend
+                cd backend
                 mvn package -DskipTests
                 pwd
                 '''
+            }
+        stage('Frontend') {
+            steps {
+                sh '''
+                pwd
+                cd ..
+                cd frontend
+                ng build --prod
+                '''
+            }
             }
         }
     }
