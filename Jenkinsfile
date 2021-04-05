@@ -22,7 +22,14 @@ pipeline {
                 ng build --prod
                 '''
             }
-
+        }
+        stage('Docker-compose') {
+            steps {
+                sh '''
+                pwd
+                docker-compose up --build
+                '''
+            }
         }
     }
 }
