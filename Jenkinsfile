@@ -12,6 +12,7 @@ pipeline {
                 pwd
                 '''
             }
+        }
         stage('Frontend') {
             steps {
                 sh '''
@@ -21,7 +22,7 @@ pipeline {
                 ng build --prod
                 '''
             }
-            }
+          
         }
     }
 }
