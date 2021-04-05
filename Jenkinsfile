@@ -27,7 +27,7 @@ pipeline {
             steps {
                 sh '''
                 pwd
-                docker-compose up --build
+                sudo docker-compose up --build
                 '''
             }
         }
