@@ -1,0 +1,5 @@
+[bastion]
+${bastion-ip} ansible_user=ubuntu ansible_ssh_private_key_file=/home/vagrant/.ssh/sk.pem
+
+[servers]
+${private-ip} ansible_user=ubuntu ansible_ssh_private_key_file=/home/vagrant/.ssh/sk.pem
